@@ -1,6 +1,6 @@
 //@(#)
-//@(#) cubeTool.c ver.1.0 - analysis tool for Gaussian cube file
-//@(#) Copyright (C), 2016, Naoya Yamaguchi
+//@(#) cubeTool.c ver.1.0 - Analysis Tool for Gaussian Cube File.
+//@(#) Copyright (C), 2016, Naoya Yamaguchi.
 //@(#)
 //@(#) Log:
 //@(#)    2016/12/04 ver.1.0 Released by Naoya Yamaguchi (based on 'wf.tcl' ('wf.c'))
