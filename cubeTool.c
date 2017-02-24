@@ -66,7 +66,6 @@ int main(int argc, char *argv[]){
   } else {
     sprintf(argvTcl, "%s %s %s", argv[1], argv[2], argv[3]);
   }
-  printf("%s\n", argvTcl);
 
   Tcl_FindExecutable(argv[0]);
   interp=Tcl_CreateInterp();
