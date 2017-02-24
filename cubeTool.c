@@ -1,11 +1,11 @@
 //@(#)
-//@(#) cubeTool.c ver.1.0 - analysis tool for Gaussian cube file.
-//@(#) Copyright (C), 2016, Naoya Yamaguchi.
+//@(#) cubeTool.c ver.1.0 - analysis tool for Gaussian cube file
+//@(#) Copyright (C), 2016, Naoya Yamaguchi
 //@(#)
 //@(#) Log:
-//@(#)    2016/12/04 ver.1.0 Released by Naoya Yamaguchi. (based on 'wf.tcl' ('wf.c'))
-//@(#)    2016/12/07 ver.1.0.1 Modified by Naoya Yamaguchi. (with the modification of *.h)
-//@(#)    2016/12/08 ver.1.0.1.1 Modified by Naoya Yamaguchi. (only the modification of *.h and argc_2.tcl)
+//@(#)    2016/12/04 ver.1.0 Released by Naoya Yamaguchi (based on 'wf.tcl' ('wf.c'))
+//@(#)    2016/12/07 ver.1.0.1 Modified by Naoya Yamaguchi (with the modification of *.h)
+//@(#)    2016/12/08 ver.1.0.1.1 Modified by Naoya Yamaguchi (only the modification of *.h and argc_2.tcl)
 //@(#)
 //@(#) Usage:
 //@(#)
@@ -59,7 +59,14 @@ int main(int argc, char *argv[]){
     size+=strlen(argv[m]);
   }
   argvTcl=(char *)malloc(size+argcTcl);
-  sprintf(argvTcl, "%s %s %s", argv[1], argv[2], argv[3]);
+  if (argcTcl==1){
+    sprintf(argvTcl, "%s", argv[1]);
+  } else if (argcTcl==2){
+    sprintf(argvTcl, "%s %s", argv[1], argv[2]);
+  } else {
+    sprintf(argvTcl, "%s %s %s", argv[1], argv[2], argv[3]);
+  }
+  printf("%s\n", argvTcl);
 
   Tcl_FindExecutable(argv[0]);
   interp=Tcl_CreateInterp();
